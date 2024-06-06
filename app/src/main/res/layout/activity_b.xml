@@ -20,11 +20,4 @@
         android:text="Open ActivityC"
         android:layout_gravity="center_horizontal|bottom" />
 
-    <Button
-        android:id="@+id/buttonCloseStack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|bottom"
-        android:text="CloseStack" />
-
 </LinearLayout>

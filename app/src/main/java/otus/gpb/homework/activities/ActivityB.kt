@@ -23,13 +23,6 @@ class ActivityB : AppCompatActivity() {
             startActivity(intent)
         }
 
-        buttonCloseStack = findViewById(R.id.buttonCloseStack)
-        buttonCloseStack?.setOnClickListener{
-            val intent = Intent(this, ActivityA::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK
-            startActivity(intent)
-        }
-
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
