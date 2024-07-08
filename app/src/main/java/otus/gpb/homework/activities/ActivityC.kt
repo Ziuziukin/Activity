@@ -33,6 +33,7 @@ class ActivityC : AppCompatActivity() {
             startActivity(intent)
         }
 
+
         buttonCloseC = findViewById(R.id.buttonClose)
         buttonCloseC?.setOnClickListener{
             finish()
