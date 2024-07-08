@@ -23,8 +23,7 @@ class ActivityC : AppCompatActivity() {
         button = findViewById(R.id.button3)
         button?.setOnClickListener {
             val intent = Intent(this, ActivityD::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK and Intent.FLAG_ACTIVITY_NO_HISTORY
-
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
             startActivity(intent)
         }
 
@@ -42,8 +41,8 @@ class ActivityC : AppCompatActivity() {
         buttonCloseStack = findViewById(R.id.buttonCloseStack)
         buttonCloseStack?.setOnClickListener{
             val intent = Intent(this, ActivityA::class.java)
-            startActivity(intent)
             finishAffinity()
+            startActivity(intent)
         }
 
 
