@@ -42,7 +42,8 @@ class SenderActivity : AppCompatActivity() {
 
         buttonOpenReceiver = findViewById(R.id.buttonOpenReceiver)
         buttonOpenReceiver?.setOnClickListener{
-            val intent = Intent(Intent.ACTION_SEND)
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.setClassName("otus.gpb.homework.activities.receiver", "otus.gpb.homework.activities.receiver.ReceiverActivity")
             intent.type = "text/plan"
             intent.addCategory(CATEGORY_DEFAULT)
             intent.putExtra("title", "Славные парни")
